@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "526253397740",
+    "project_id": "artecode-2bbc2",
+    "storage_bucket": "artecode-2bbc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526253397740:android:48454f85fffbeb9bde37c9",
+        "android_client_info": {
+          "package_name": "ph.artecode.arteapp.com.arte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526253397740-859nq5pjec7rahq7tplabh6m3uuaqujg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClUP1FH4wecZMWFRgGRoj91lknHDk70nQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526253397740-859nq5pjec7rahq7tplabh6m3uuaqujg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
