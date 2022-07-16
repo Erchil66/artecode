@@ -2,7 +2,6 @@ import 'package:arte/constant/colors.dart';
 import 'package:arte/widgets/label/text_label.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class OnboardCard extends StatelessWidget {
   final String? headTitle, description, image;

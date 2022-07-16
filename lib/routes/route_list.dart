@@ -11,12 +11,12 @@ class Routes {
         transition: Transition.downToUp,
         transitionDuration: 250.milliseconds,
         name: signIn,
-        page: () => const SignInViews()),
+        page: () => SignInViews()),
     GetPage(
         transition: Transition.downToUp,
         transitionDuration: 250.milliseconds,
         name: signUp,
-        page: () => const SignUpViews()),
+        page: () => SignUpViews()),
 
     /// Onboarding
     GetPage(

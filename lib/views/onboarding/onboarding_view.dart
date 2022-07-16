@@ -1,6 +1,7 @@
 import 'package:arte/constant/colors.dart';
 import 'package:arte/controllers/onboard_controller.dart';
 import 'package:arte/models/onboarding_model.dart';
+import 'package:arte/routes/route_name.dart';
 import 'package:arte/widgets/onboard_card/bottom_card.dart';
 import 'package:arte/widgets/onboard_card/card.dart';
 import 'package:arte/widgets/onboard_card/top_card.dart';
@@ -19,8 +20,8 @@ class OnboardingView extends StatelessWidget {
         child: Scaffold(
           backgroundColor: colorWhite,
           appBar: TopCardOnboard(
-            skip: () {},
-            getStarted: () {},
+            skip: () => Get.toNamed(signIn),
+            getStarted: () => Get.toNamed(signIn),
             isLastpage: controller.selectedPagexNumber.value ==
                     listOnboarding.indexOf(listOnboarding.last)
                 ? true
