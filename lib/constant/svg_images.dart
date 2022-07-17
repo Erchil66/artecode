@@ -12,7 +12,12 @@ const String logo = "$pathSvg/logo.svg",
     passwordIcon = "$pathSvg/password.svg",
     spaceBg = "$pathSvg/space.svg",
     mobile = "$pathSvg/mobile.svg",
-    tagname = "$pathSvg/tagname.svg";
+    tagname = "$pathSvg/tagname.svg",
+    //dash board icon
+    home = "$pathSvg/home.svg",
+    community = "$pathSvg/community.svg",
+    feed = "$pathSvg/feed.svg",
+    user = "$pathSvg/profile.svg";
 
 ///// onboarding images///////
 

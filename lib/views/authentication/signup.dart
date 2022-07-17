@@ -137,6 +137,7 @@ class SignUpViews extends StatelessWidget {
                   press: () {
                     if (key2.currentState!.validate()) {
                       log("Sign UP");
+                      controller.addusers();
                     }
                   },
                 ),

@@ -71,6 +71,7 @@ class SignInViews extends StatelessWidget {
                       press: () {
                         if (key1.currentState!.validate()) {
                           log("Sign In");
+                          controller.signinuser();
                         }
                       },
                     ),

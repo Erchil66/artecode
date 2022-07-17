@@ -1,0 +1,20 @@
+import 'package:arte/constant/colors.dart';
+
+import 'package:arte/controllers/profilecontroller.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class ProfileView extends GetView<ProfileController> {
+  const ProfileView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: colorGrey,
+      body: SafeArea(
+          child: Column(
+        children: [],
+      )),
+    );
+  }
+}
