@@ -17,7 +17,13 @@ const String logo = "$pathSvg/logo.svg",
     home = "$pathSvg/home.svg",
     community = "$pathSvg/community.svg",
     feed = "$pathSvg/feed.svg",
-    user = "$pathSvg/profile.svg";
+    user = "$pathSvg/profile.svg",
+    dots = "$pathSvg/dots.svg",
+    editcreate = "$pathSvg/editcreate.svg",
+    leaf = "$pathSvg/leaf.svg",
+    star = "$pathSvg/star.svg",
+    left = "$pathSvg/left.svg",
+    signout = "$pathSvg/signout.svg";
 
 ///// onboarding images///////
 
@@ -26,7 +32,9 @@ const String onboard1 = "$pathPng/onboard1.png",
     onboard3 = "$pathPng/onboard3.png",
     space = "$pathPng/space.png",
     facebook = "$pathPng/facebook.png",
-    bgsignup = "$pathPng/bgsignup.png";
+    bgsignup = "$pathPng/bgsignup.png",
+    logoshop = "$pathPng/logo.png",
+    sample = "$pathPng/sample1.png";
 
 
 // Login use

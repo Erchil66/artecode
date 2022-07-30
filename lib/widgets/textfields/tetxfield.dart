@@ -13,6 +13,11 @@ class TextFieldCustom extends StatelessWidget {
   final TextInputType? keyboardtype;
   final double? iconhieght;
   final String? Function(String?)? validator;
+  final Color? fillcolor;
+  final Color? textColor;
+  final bool? showVertical;
+  final void Function(String)? onChanged;
+  final Color? iconColor;
 
   const TextFieldCustom(
       {super.key,
@@ -23,7 +28,12 @@ class TextFieldCustom extends StatelessWidget {
       this.ispassword,
       this.keyboardtype,
       this.iconhieght,
-      this.validator});
+      this.validator,
+      this.fillcolor,
+      this.textColor,
+      this.showVertical,
+      this.onChanged,
+      this.iconColor});
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +42,15 @@ class TextFieldCustom extends StatelessWidget {
         width: 295,
         child: Container(
           decoration: BoxDecoration(
-              color: colorDark, borderRadius: BorderRadius.circular(5)),
+              color: fillcolor ?? colorDark,
+              borderRadius: BorderRadius.circular(5)),
           child: Center(
             child: TextFormField(
               controller: controller,
+              onChanged: onChanged,
               style: GoogleFonts.poppins(
                 fontSize: 14.dp,
-                color: colorWhite,
+                color: textColor ?? colorWhite,
                 fontWeight: FontWeight.w400,
               ),
               validator: validator,
@@ -48,12 +60,12 @@ class TextFieldCustom extends StatelessWidget {
               obscureText: ispassword ?? false,
               keyboardType: keyboardtype ?? TextInputType.text,
               textDirection: TextDirection.ltr,
-              cursorColor: colorWhite,
+              cursorColor: textColor ?? colorWhite,
               textAlign: TextAlign.left,
               decoration: InputDecoration(
                 hintStyle: GoogleFonts.poppins(
                   fontSize: 14.dp,
-                  color: colorGrey,
+                  color: textColor ?? colorGrey,
                   fontWeight: FontWeight.w400,
                 ),
                 hintText: hintText ?? "",
@@ -65,7 +77,7 @@ class TextFieldCustom extends StatelessWidget {
                 ),
                 // isCollapsed: true,
                 isDense: true,
-                fillColor: colorDark,
+                fillColor: fillcolor ?? colorDark,
                 prefixIcon: SizedBox(
                   height: 5.5.h,
                   child: Row(
@@ -79,17 +91,20 @@ class TextFieldCustom extends StatelessWidget {
                       SvgPicture.asset(
                         svgicon!,
                         height: iconhieght ?? 2.5.h,
+                        color: iconColor == null ? null : iconColor!,
                       ),
                       SizedBox(
                         width: 1.w,
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 5, bottom: 5),
-                        child: VerticalDivider(
-                          color: colorWhite,
-                          thickness: 1,
-                        ),
-                      ),
+                      showVertical == false
+                          ? const SizedBox.shrink()
+                          : const Padding(
+                              padding: EdgeInsets.only(top: 5, bottom: 5),
+                              child: VerticalDivider(
+                                color: colorWhite,
+                                thickness: 1,
+                              ),
+                            ),
                     ],
                   ),
                 ),

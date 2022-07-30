@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:arte/constant/globalcall.dart';
+import 'package:arte/constant/storagekey.dart';
 import 'package:arte/routes/route_name.dart';
 import 'package:arte/services/firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -37,8 +38,9 @@ class Authcontroller extends GetxController {
   //Sign in
   signinuser() async {
     try {
-      await firebaseAuth.signInWithEmailAndPassword(
+      final result = await firebaseAuth.signInWithEmailAndPassword(
           email: emailController.text, password: passwordcontroller.text);
+      boxMe.write(uidF, result.user!.uid);
       Get.offNamedUntil(mainboard, (route) => false);
     } on FirebaseException catch (error) {
       log(error.message!);

@@ -4,6 +4,7 @@ import 'package:arte/views/authentication/signin.dart';
 import 'package:arte/views/authentication/signup.dart';
 import 'package:arte/views/dashboard/mainboard.dart';
 import 'package:arte/views/onboarding/onboarding_view.dart';
+import 'package:arte/views/profile/editprofile.dart';
 import 'package:get/get.dart';
 
 class Routes {
@@ -34,5 +35,11 @@ class Routes {
         name: mainboard,
         binding: Bindingmain(),
         page: () => const MainboardView()),
+    //Profile Edit
+    GetPage(
+        transition: Transition.downToUp,
+        transitionDuration: 250.milliseconds,
+        name: profileEdit,
+        page: () => const ProfileEdit()),
   ];
 }

@@ -1,3 +1,5 @@
+import 'package:arte/constant/globalcall.dart';
+import 'package:arte/constant/storagekey.dart';
 import 'package:arte/routes/route_list.dart';
 import 'package:arte/routes/route_name.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
     return FlutterSizer(
       builder: ((p0, p1, p2) => GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            initialRoute: onboard,
+            initialRoute: boxMe.read(uidF) != null ? mainboard : onboard,
             getPages: Routes.list,
           )),
     );
