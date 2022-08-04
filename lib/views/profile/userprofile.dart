@@ -56,7 +56,7 @@ class ProfileView extends GetView<ProfileController> {
                         ProfileData(
                           username: controller.userdata.value.username,
                           email: controller.userdata.value.email,
-                          imageURL: "",
+                          imageURL: controller.userdata.value.imageUrl ?? "",
                           editpress: () {},
                           edit: false,
                         ),

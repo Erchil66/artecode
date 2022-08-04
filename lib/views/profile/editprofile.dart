@@ -59,8 +59,9 @@ class ProfileEdit extends StatelessWidget {
                             ProfileData(
                               username: controller.userdata.value.username,
                               email: controller.userdata.value.email,
-                              imageURL: "",
-                              editpress: () {},
+                              imageURL:
+                                  controller.userdata.value.imageUrl ?? "",
+                              editpress: () => controller.pickImage(),
                               edit: true,
                             ),
                             SizedBox(
