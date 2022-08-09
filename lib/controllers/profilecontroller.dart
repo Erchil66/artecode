@@ -31,12 +31,14 @@ class ProfileController extends GetxController {
     userdata(result);
     textDefault();
     log(userdata.value.email!);
+    update();
   }
 
   textDefault() {
     deliverputname.text = userdata.value.deliverputname ?? "Deliver Put Name";
     userEditorController.text = userdata.value.username ?? "";
     mobileEditorController.text = userdata.value.mobile ?? "";
+    update();
   }
 
   updateField(dynamic data) async {
@@ -60,6 +62,7 @@ class ProfileController extends GetxController {
       if (images != null) {
         if (userdata.value.imageUrl != null) {
           replaceImage();
+          update();
         }
 
         final myurl = await uploadImages(images);
@@ -89,7 +92,7 @@ class ProfileController extends GetxController {
   replaceImage() async {
     final knownpath = storage.refFromURL(userdata.value.imageUrl!);
     storage.ref(knownpath.fullPath).delete();
-    userdata.value.imageUrl = "";
+    // userdata.value.imageUrl = "";
     update();
   }
 }

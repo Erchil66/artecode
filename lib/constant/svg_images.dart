@@ -23,6 +23,9 @@ const String logo = "$pathSvg/logo.svg",
     leaf = "$pathSvg/leaf.svg",
     star = "$pathSvg/star.svg",
     left = "$pathSvg/left.svg",
+    bell = "$pathSvg/bell.svg",
+    cart = "$pathSvg/cart.svg",
+    filter = "$pathSvg/filter.svg",
     signout = "$pathSvg/signout.svg";
 
 ///// onboarding images///////
